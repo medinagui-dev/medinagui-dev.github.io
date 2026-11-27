@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--
+  =====================================================================
+  🌐 O MEU SITE — modelo da aula do AMS
+  =====================================================================
+
+  Este arquivo é o seu site inteiro. Ele tem três partes:
+
+    1. O CSS (dentro de <style>): é a ROUPA do site.
+       Cores, letras, tamanhos, cantos arredondados.
+
+    2. O HTML (dentro de <body>): é o ESQUELETO do site.
+       Os títulos, os textos e as listas.
+
+    3. O ROBÔ (dentro de <script>, lá no fim): faz o site se
+       atualizar sozinho quando você muda alguma coisa, sem F5.
+       Não precisa mexer nele.
+
+  Este texto aqui é um COMENTÁRIO: um bilhete para você, que o
+  navegador não mostra na página. No HTML, o comentário começa com
+  os sinais "menor, exclamação, traço, traço" e termina com
+  "traço, traço, maior". No CSS, começa com /* e termina com */.
+
+  🔒 REGRA DE PRIVACIDADE (vale para todo mundo):
+     Este site é PÚBLICO: qualquer pessoa na internet pode ver.
+     Por isso, fale de um INTERESSE seu (hobby, jogo, time, banda...).
+     ✅ Pode: só o seu primeiro nome ou um apelido (e é opcional).
+     ❌ Não pode: foto do seu rosto (nem de colegas), nome da escola,
+        cidade, telefone, e-mail, endereço ou rede social.
+  =====================================================================
+-->
+<html lang="pt-BR">
+<head>
+  <!-- "charset" faz os acentos e os emojis aparecerem certinho. -->
+  <meta charset="utf-8">
+
+  <!-- Esta linha deixa o site bonito no celular (não precisa mexer). -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ✏️ TROQUE: o texto que aparece na aba do navegador. -->
+  <title>Eu curto astronomia</title>
+
+  <style>
+    /*
+      ===============================================================
+      🎨 CSS = a ROUPA do site
+      ===============================================================
+      Cada bloco funciona assim:
+
+        quem { propriedade: valor; }
+
+      "quem" diz QUAL parte da página vai mudar (ex.: h1 = o título).
+      Dentro das chaves { } vão as mudanças, uma por linha,
+      sempre terminando com ponto e vírgula ;
+
+      Cores podem ser escritas em inglês (red, gold, white...)
+      ou com um código que começa com # (ex.: #ff7a59).
+      Procure "color picker" no Google para achar o código de qualquer cor.
+    */
+
+
+    /* ----- A PÁGINA INTEIRA (o fundo atrás de tudo) ----- */
+    body {
+      /* ✏️ TROQUE: a cor de fundo da página.
+         Aqui é um degradê (uma cor virando outra) de cima para baixo.
+         Quer uma cor só? Apague a linha de baixo e escreva, por exemplo:
+         background: #1b1b3a;                                          */
+      background: linear-gradient(#1b1b3a, #4b2a6b);
+
+      /* ✏️ TROQUE: o tipo de letra do site todo.
+         Experimente: Verdana, Georgia, "Courier New", "Comic Sans MS",
+         "Trebuchet MS" ou Impact. Se o computador não tiver a primeira,
+         ele usa a próxima da lista.                                    */
+      font-family: "Trebuchet MS", Verdana, sans-serif;
+
+      /* Espaço entre a borda da tela e o cartão. */
+      padding: 24px 16px;
+
+      /* Tira a margem que o navegador põe sozinho. */
+      margin: 0;
+
+      /* Faz o fundo cobrir a tela toda, mesmo com pouco texto. */
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+
+    /* ----- O CARTÃO (a caixa clara no meio, com o conteúdo) ----- */
+    main {
+      /* ✏️ TROQUE: a cor do cartão. */
+      background: #fff8e7;
+
+      /* ✏️ TROQUE: a cor do texto. */
+      color: #2b2250;
+
+      /* Espaço entre a borda do cartão e o texto de dentro. */
+      padding: 32px 24px;
+
+      /* ✏️ TROQUE: o quanto os cantos são arredondados.
+         0px = cantos retos · 40px = bem redondinho.                    */
+      border-radius: 24px;
+
+      /* Largura máxima do cartão. No celular ele encolhe sozinho. */
+      max-width: 640px;
+
+      /* "auto" nas laterais centraliza o cartão na tela. */
+      margin: 24px auto;
+
+      /* Espaço entre as linhas de texto (deixa mais fácil de ler). */
+      line-height: 1.5;
+    }
+
+
+    /* ----- O EMOJI GRANDE lá em cima ----- */
+    .emoji {
+      /* ✏️ TROQUE: o tamanho do emoji. */
+      font-size: 80px;
+      text-align: center;
+      margin: 0;
+    }
+
+
+    /* ----- O TÍTULO PRINCIPAL (h1) ----- */
+    h1 {
+      /* ✏️ TROQUE: a cor do título. */
+      color: #ff7a59;
+
+      /* ✏️ TROQUE: o tamanho do título. */
+      font-size: 40px;
+
+      /* center = no meio · left = à esquerda · right = à direita */
+      text-align: center;
+      margin: 8px 0 16px;
+
+      /* Linhas mais juntinhas quando o título quebra (no celular). */
+      line-height: 1.2;
+    }
+
+
+    /* ----- OS PARÁGRAFOS (p) ----- */
+    p {
+      /* ✏️ TROQUE: o tamanho das letras do texto. */
+      font-size: 20px;
+    }
+
+
+    /* ----- OS SUBTÍTULOS ("3 coisas que eu curto", "Quero aprender") ----- */
+    .subtitulo {
+      /* ✏️ TROQUE: a cor dos subtítulos. */
+      color: #6b3fa0;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 32px 0 12px;
+    }
+
+
+    /* ----- A LISTA (ul) ----- */
+    ul {
+      /* Tira as bolinhas da lista: os emojis já fazem esse papel. */
+      list-style: none;
+      padding: 0;
+    }
+
+
+    /* ----- CADA ITEM DA LISTA (li) ----- */
+    li {
+      /* ✏️ TROQUE: a cor da caixinha de cada item. */
+      background: #ffe3c2;
+
+      font-size: 20px;
+      padding: 12px 16px;
+      border-radius: 12px;
+
+      /* Espaço entre um item e outro. */
+      margin-bottom: 10px;
+    }
+
+
+    /* ----- O RODAPÉ (a linha pequena no final) ----- */
+    .rodape {
+      font-size: 16px;
+      text-align: center;
+      opacity: 0.7;  /* deixa o texto um pouco mais clarinho */
+      margin-top: 32px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    =================================================================
+    🦴 HTML = o ESQUELETO do site
+    =================================================================
+    O HTML é feito de "etiquetas" (tags). Cada parte abre e fecha:
+
+      <p>   abre um parágrafo
+      </p>  fecha o parágrafo (repare na barra /)
+
+    O texto que você vê na página fica ENTRE a abertura e o fechamento.
+    Troque só o texto e tome cuidado para não apagar os < > nem a /.
+  -->
+
+  <!-- <main> é o cartão claro do meio. Tudo do site fica aqui dentro. -->
+  <main>
+
+    <!-- ✏️ TROQUE: o emoji que combina com o seu interesse.
+         No Windows, aperte a tecla Windows + ponto (.) para abrir os emojis. -->
+    <p class="emoji">🔭</p>
+
+    <!-- ✏️ TROQUE: o título do seu site. <h1> é o título principal. -->
+    <h1>Eu curto astronomia</h1>
+
+    <!-- ✏️ TROQUE: uma ou duas frases contando sobre o seu interesse. -->
+    <p>
+      Eu adoro olhar o céu à noite. Gosto de descobrir
+      o nome das estrelas e de imaginar como seria viajar até outro planeta.
+    </p>
+
+    <!-- ✏️ TROQUE: o subtítulo da lista. -->
+    <p class="subtitulo">3 coisas que eu curto</p>
+
+    <!-- <ul> é uma lista. Cada <li> é um item dela.
+         ✏️ TROQUE o texto de cada item. Quer mais um item?
+         Copie uma linha inteira de <li> até </li> e cole embaixo. -->
+    <ul>
+      <li>🪐 Ver os anéis de Saturno no telescópio</li>
+      <li>🌑 Acompanhar as fases da Lua</li>
+      <li>🚀 Assistir a lançamentos de foguetes ao vivo</li>
+    </ul>
+
+    <!-- ✏️ TROQUE: mais uma parte do site, com um subtítulo e um texto. -->
+    <p class="subtitulo">Quero aprender</p>
+    <p>
+      Um dia quero criar um aplicativo que mostra quais planetas
+      dá para ver no céu em cada noite.
+    </p>
+
+    <!-- ✏️ TROQUE: o seu PRIMEIRO NOME ou um apelido. Também pode apagar.
+         🔒 Nada de sobrenome, escola, cidade ou contato. -->
+    <p class="rodape">Feito com HTML e CSS por Astro ✨</p>
+
+  </main>
+
+  <!--
+    🤖 O ROBÔ QUE ATUALIZA SOZINHO (não precisa mexer nem apagar)
+
+    Isto é JavaScript, a terceira linguagem da web: ela dá COMPORTAMENTO
+    para a página. De 10 em 10 segundos, o robô pergunta para o GitHub
+    se o seu site mudou. Se mudou, ele recarrega a página sozinho.
+    Assim, depois do commit, é só esperar: não precisa apertar F5.
+
+    No laboratório o robô fica parado (lá o resultado já muda na hora).
+  -->
+  <script>
+    // Aqui o robô guarda o seu site do jeito que ele está agora.
+    let versaoGuardada = null;
+
+    // A tarefa do robô: buscar o site de novo e comparar.
+    async function conferir() {
+      try {
+        // Pede o site ao GitHub, sem usar a cópia velha do navegador.
+        const resposta = await fetch(location.pathname + '?robo=' + Date.now(), { cache: 'no-store' });
+        const versaoNova = await resposta.text();
+
+        if (versaoGuardada === null) {
+          versaoGuardada = versaoNova;   // primeira vez: só guarda
+        } else if (versaoNova !== versaoGuardada) {
+          location.reload();             // mudou: recarrega a página
+        }
+      } catch (erro) {
+        // Sem internet agora? Tudo bem: tenta de novo daqui a pouco.
+      }
+    }
+
+    // Só liga o robô quando o site está no ar (endereço com http).
+    if (location.protocol.startsWith('http')) {
+      conferir();
+      setInterval(conferir, 10000);    // 10000 milissegundos = 10 segundos
+    }
+  </script>
+</body>
+</html>
